@@ -195,7 +195,7 @@ if nav == 'Home':
     st.subheader(':blue[Top Venues]')
     st.write('This graph represents the number of matches held in each venue.')
     st.plotly_chart(fig4)
-    st.write("* Although Australia and India played the most number of matches, the venue which hosted **most number of matches Sharjha**(244), is located in Pakisthan.Harare (174),Sydney (160),Melbourne (150), and Columbia (138) occupy the subsequent positions respectectively.")
+    st.write("Among various cricket teams, Australia and India stand out for having played the highest number of matches. Surprisingly, the venue that hosted the most matches is not in either of these countries, but rather in Sharjah, with a staggering 244 matches held there. Harare follows next with 174 matches, while Sydney, Melbourne, and Columbia secure their places in the list with 160, 150, and 138 matches hosted, respectively")
 
     st.write("")
     st.write("")
