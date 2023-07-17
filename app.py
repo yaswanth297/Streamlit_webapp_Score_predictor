@@ -67,7 +67,7 @@ for i in df['Margin']:
         By.append('Tied')
 
 df['Wonby']=By
-fig2=px.histogram(df,x='Wonby',color_discrete_sequence=px.colors.sequential.Viridis)
+fig2=px.bar(df,x='Wonby',color='Wonby', color_continuous_scale='Viridis')
 
 
 
@@ -76,10 +76,10 @@ year=[]
 for i in df['Match Date']:
     data=i.split(' ')
     year.append(int(data[-1]))
-df['year']=year
-years=df.copy()
-years=years.sort_values('year',ascending=True)
-plt.xticks(rotation=90)
+data_counts = pd.Series(year).value_counts().reset_index()
+data_counts.columns = ['value', 'count']
+fig3=px.bar(data_counts,x='value',y='count',color='count',color_continuous_scale='Viridis')
+
 
 
 
@@ -215,10 +215,8 @@ if nav == 'Home':
 
     st.subheader(':blue[Number of Matches played in each year]')
     st.write("This chart represents the number of international matches conducted each year.")
-    val=st.slider('Select the year',min_value=1971,max_value=2023,value=1971,step=1)
-    fig3=sns.countplot(x='year',data=years[years['year']>=val])
-    fig3.patch.set_facecolor('black')
-    st.pyplot(fig3.get_figure(),use_container_width=True)
+    st.plotly_chart(fig3,use_container_width=True)
+
 
     st.write("")
     st.write("")
