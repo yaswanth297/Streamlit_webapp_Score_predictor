@@ -179,7 +179,7 @@ if nav == 'Home':
     st.subheader(':blue[Number of Matches played by each team]')
     st.write("This graph represents number of matches played by each team till 2023.")
     st.plotly_chart(fig1)
-    st.write("* **India(1029) played most number of matches** since the inagural of ODIs in 1971 ,followed by Australia(978) and Pakistan(953).")
+    st.write("Since the inception of ODIs in 1971, India has played the highest number of matches (1029), closely followed by Australia (978) and Pakistan (953). These cricketing powerhouses have consistently been at the forefront of the One Day International format, contributing to the sport's rich history with their remarkable performances and passionate fan bases.")
 
     st.write("")
     st.write("")
@@ -187,7 +187,7 @@ if nav == 'Home':
     st.subheader(':blue[Results]')
     st.write("This graph illustrates the distribution of matches won based on different scenarios: chasing, defending, or resulting in a tie.")
     st.plotly_chart(fig2)
-    st.write("* The difference between number of matches won by chasing (2213) and by defending (2157) is very minute.It is worthy to note that almost 208 matches were tied from 1971 till today.")
+    st.write("The gap between the number of matches won by chasing (2213) and defending (2157) is remarkably narrow. Notably, an astonishing 208 matches were tied from 1971 up to the present day. This highlights the highly competitive nature of cricket, where teams have shown almost equal prowess in both chasing and defending, resulting in thrilling encounters that have occasionally ended in draws.")
 
     st.write("")
     st.write("")
@@ -224,7 +224,7 @@ if nav == 'Home':
     st.subheader(':blue[Most wins]')
     st.write("This chart represents total number of wins by a team till 2023.")
     st.plotly_chart(fig5)
-    st.write("* **Australia(594) dominated the ODIs by winning the most number of matches** followed by India (539),Pakistan (503),West Indies (411) and South Africa (399).")
+    st.write("In the realm of One Day Internationals, Australia stands out as the dominant force, having secured the highest number of victories (594). Trailing closely behind are India (539), Pakistan (503), West Indies (411), and South Africa (399). ")
 
 if nav=='Score Predictor':
     st.header(':blue[Score Predictor]')
