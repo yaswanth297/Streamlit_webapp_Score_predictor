@@ -172,7 +172,7 @@ ChangeWidgetFontSize('Navigation', '32px')
 if nav == 'Home':
     
     st.header(':blue[Home]')
-    st.image('pxfuel.jpg',width=800)
+    st.image('pxfuel.jpg',width=650)
 
     st.write("")
     st.write("")
