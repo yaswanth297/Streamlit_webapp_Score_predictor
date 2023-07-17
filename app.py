@@ -11,7 +11,7 @@ df=pd.read_csv('ODI.csv')
 df1=df.head(10)
 
 df2=pd.read_csv('Countries_data.csv')
-df2_disp=df2.loc[:, ~df.columns.duplicated()]
+df2_disp=df2.loc[:, ~df2.columns.duplicated()]
 
 
 if "center" not in st.session_state:
