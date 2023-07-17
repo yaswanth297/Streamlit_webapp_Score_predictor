@@ -179,7 +179,7 @@ if nav == 'Home':
 
     st.subheader(":orange[Sample Data]")
     if st.checkbox('Show Sample Data'):
-        st.table(df1)
+        st.table(df2.head(10))
     
     st.write("")
     st.write("")
