@@ -12,6 +12,17 @@ df1=df.head(10)
 
 df2=pd.read_csv('Countries_data.csv')
 
+if "center" not in st.session_state:
+    layout = "wide"
+else:
+    layout = "centered" if st.session_state.center else "wide"
+
+st.set_page_config(layout=layout)
+
+st.checkbox(
+    "Viewing on a mobile?", key="center", value=st.session_state.get("center", False)
+)
+
 def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
     htmlstr = """<script>var elements = window.parent.document.querySelectorAll('*'), i;
                     for (i = 0; i < elements.length; ++i) { if (elements[i].innerText == |wgt_txt|) 
@@ -178,7 +189,7 @@ if nav == 'Home':
 
     st.subheader(':blue[Number of Matches played by each team]')
     st.write("This graph represents number of matches played by each team till 2023.")
-    st.plotly_chart(fig1)
+    st.plotly_chart(fig1,use_container_width=True)
     st.write("Since the inception of ODIs in 1971, India has played the highest number of matches (1029), closely followed by Australia (978) and Pakistan (953). These cricketing powerhouses have consistently been at the forefront of the One Day International format, contributing to the sport's rich history with their remarkable performances and passionate fan bases.")
 
     st.write("")
@@ -186,7 +197,7 @@ if nav == 'Home':
 
     st.subheader(':blue[Results]')
     st.write("This graph illustrates the distribution of matches won based on different scenarios: chasing, defending, or resulting in a tie.")
-    st.plotly_chart(fig2)
+    st.plotly_chart(fig2,use_container_width=True)
     st.write("The gap between the number of matches won by chasing (2213) and defending (2157) is remarkably narrow. Notably, an astonishing 208 matches were tied from 1971 up to the present day. This highlights the highly competitive nature of cricket, where teams have shown almost equal prowess in both chasing and defending, resulting in thrilling encounters that have occasionally ended in draws.")
 
     st.write("")
@@ -194,7 +205,7 @@ if nav == 'Home':
 
     st.subheader(':blue[Top Venues]')
     st.write('This graph represents the number of matches held in each venue.')
-    st.plotly_chart(fig4)
+    st.plotly_chart(fig4,use_container_width=True)
     st.write("Among various cricket teams, Australia and India stand out for having played the highest number of matches. Surprisingly, the venue that hosted the most matches is not in either of these countries, but rather in Sharjah, with a staggering 244 matches held there. Harare follows next with 174 matches, while Sydney, Melbourne, and Columbia secure their places in the list with 160, 150, and 138 matches hosted, respectively")
 
     st.write("")
@@ -207,7 +218,7 @@ if nav == 'Home':
     val=st.slider('Select the year',min_value=1971,max_value=2023,value=1971,step=1)
     fig3=sns.countplot(x='year',data=years[years['year']>=val])
     fig3.patch.set_facecolor('black')
-    st.pyplot(fig3.get_figure())
+    st.pyplot(fig3.get_figure(),use_container_width=True)
 
     st.write("")
     st.write("")
@@ -215,7 +226,7 @@ if nav == 'Home':
 
     st.subheader(':blue[Global Team Win Distribution ]')
     st.write("This chart represents number of matches won by a team in each country.")
-    st.plotly_chart(fig6)
+    st.plotly_chart(fig6,use_container_width=True)
 
     st.write("")
     st.write("")
@@ -223,7 +234,7 @@ if nav == 'Home':
 
     st.subheader(':blue[Most wins]')
     st.write("This chart represents total number of wins by a team till 2023.")
-    st.plotly_chart(fig5)
+    st.plotly_chart(fig5,use_container_width=True)
     st.write("In the realm of One Day Internationals, Australia stands out as the dominant force, having secured the highest number of victories (594). Trailing closely behind are India (539), Pakistan (503), West Indies (411), and South Africa (399). ")
 
 if nav=='Score Predictor':
