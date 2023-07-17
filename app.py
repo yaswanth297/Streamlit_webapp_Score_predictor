@@ -13,8 +13,7 @@ df1=df.head(10)
 df2=pd.read_csv('Countries_data.csv')
 df2_cols=df2.columns
 unnamed_columns = ['unnamed']
-unnamed_columns.append(df2_cols)
-df2.columns=unnamed_columns
+df2.columns=unnamed_columns+df2_cols
 df2_disp=df2.drop(columns=['unnamed'])
 
 
