@@ -11,11 +11,6 @@ df=pd.read_csv('ODI.csv')
 df1=df.head(10)
 
 df2=pd.read_csv('Countries_data.csv')
-df2_cols=df2.columns
-unnamed_columns = ['unnamed']
-df2.columns=unnamed_columns+df2_cols
-df2_disp=df2.drop(columns=['unnamed'])
-
 
 
 
@@ -186,7 +181,7 @@ if nav == 'Home':
 
     st.subheader(":blue[Sample Data]")
     if st.checkbox('Show Sample Data'):
-        st.table(df2_disp.head(10))
+        st.table(df2.head(10))
     
     st.write("")
     st.write("")
