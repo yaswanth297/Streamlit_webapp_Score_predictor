@@ -238,8 +238,8 @@ if nav == 'Home':
     st.plotly_chart(fig5,use_container_width=True)
     st.write("In the realm of One Day Internationals, Australia stands out as the dominant force, having secured the highest number of victories (594). Trailing closely behind are India (539), Pakistan (503), West Indies (411), and South Africa (399). ")
 
-if nav=='ODI Score Predictor':
-    st.header(':blue[Score Predictor]')
+if nav=='Score Predictor':
+    st.header(':blue[ODI Score Predictor]')
 
     st.write(":blue[**NOTE**] : Please choose the follwing options which are likely to happen in a real match situation to get a better prediction from the model.")
 
