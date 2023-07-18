@@ -262,5 +262,5 @@ if nav=='Score Predictor':
     if st.button('Predict'):
         if int(result)<current_score:
             st.write("The model predicts the score to be {}, which is less than the current score as it has been trained on many instances in which the predicted score was which the batting team could manage and the input given might be an exceptional case.".format(result))
-        st.success('The Predicted Score is {}'.format(result))
+        st.success('The Predicted Score by the end of 50 overs is {}'.format(result))
         
