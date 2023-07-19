@@ -97,7 +97,7 @@ fig4= px.bar(grounds, x="Grounds", y="count",color='count',color_continuous_scal
 
 
 #graph5
-winners=df['Winner'].value_counts()
+winner=df['Winner'].value_counts()
 winner_counts_df = pd.DataFrame({'Winner': winner.index, 'Count': winner.values})
 fig5 = px.bar(data_frame=winner_counts_df, x='Winner', y='Count', color='Count', 
               color_continuous_scale='Viridis')
